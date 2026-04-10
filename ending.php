@@ -14,7 +14,7 @@ $endings = [
     2 => [
         "title" => "Knight in Neon Armor",
         "image" => "assets/ending2.jpg",
-        "text" => "You stood victorious but chose to lower your blade. Recognizing your mercy, she repayed the debt by cleaning up the hitman sent after you. She vanished into the neon rain. But with a failed contract and a dead cleanup crew, are you truly free?"
+        "text" => "You stood victorious but chose to lower your blade. Recognizing your mercy, she repaid the debt by cleaning up the hitman sent after you. She vanished into the neon rain. But with a failed contract and a dead cleanup crew, are you truly free?"
     ],
     3 => [
         "title" => "Employee of the Day",
