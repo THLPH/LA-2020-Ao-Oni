@@ -1,0 +1,94 @@
+:root {
+    --bg-cream: #f4f4f0;
+    --fg-dark: #121212;
+    --accent-red: #8b1c1c;
+    --border-width: 3px;
+}
+
+body {
+    background-color: var(--bg-cream);
+    color: var(--fg-dark);
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.auth-box {
+    border: var(--border-width) solid var(--fg-dark);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    background: var(--bg-cream);
+    box-shadow: 8px 8px 0px rgba(18, 18, 18, 0.15);
+}
+
+.title-logo {
+    text-align: center;
+    border: 3px dashed var(--fg-dark);
+    padding: 20px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+h2 {
+    text-transform: uppercase;
+    border-bottom: var(--border-width) solid var(--fg-dark);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--fg-dark);
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.button-group button {
+    flex: 1;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: var(--fg-dark);
+    color: var(--bg-cream);
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--accent-red);
+}
+
+.msg {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.error {
+    color: var(--accent-red);
+    border: 1px solid var(--accent-red);
+}
+
+.success {
+    color: green;
+    border: 1px solid green;
+}
