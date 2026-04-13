@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['archetype'])) {
     }
 
     $day = 1;
+    session_write_close();
     header("Location: index.php");
     exit();
 }
