@@ -1,9 +1,13 @@
+<?php 
+require_once 'init.php'; 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Kowloon Mystery - Transition</title>
+    <title>The Kowloon Mystery</title>
     <style>
         /* Base Page Setup */
         body {
@@ -24,7 +28,7 @@
             display: flex;
             max-width: 1200px;
             width: 95%;
-            height: 600px; /* Fixed height for the 1:1 ratio */
+            height: 600px;
             background: #0a0a0a;
             border: 1px solid #1a1a1a;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
@@ -32,10 +36,10 @@
             animation: fadeIn 2.5s ease-in-out forwards;
         }
 
-        /* Image Section - Forced 1:1 */
+        /* Image Section */
         .image-panel {
-            flex: 0 0 600px; /* Width fixed at 600px */
-            height: 600px;    /* Height fixed at 600px */
+            flex: 0 0 600px;
+            height: 600px;
             background-image: url('assets/kowloon.jpg');
             background-size: cover;
             background-position: center;
@@ -43,7 +47,7 @@
             position: relative;
         }
 
-        /* Dark gradient overlay on the image */
+        /* Dark gradient overlay */
         .image-panel::after {
             content: '';
             position: absolute;
@@ -87,7 +91,7 @@
             line-height: 1.8;
             font-size: 0.95rem;
             margin-bottom: 25px;
-            text-align: left; /* Changed from justify to improve flow */
+            text-align: left;
             color: #a0a0a0;
         }
 
@@ -96,7 +100,7 @@
             font-weight: bold;
         }
 
-        /* No-JS Button (Anchor Tag) */
+        /* Button (Anchor Tag) */
         .action-button {
             display: inline-block;
             margin-top: auto;
@@ -166,7 +170,7 @@
 
             <p>The 1993 demolition was the ultimate cleanup. There are no records of the "Ogre" after the demolition. They didn't just tear down the blocks; they hauled away the evidence. Thousands of tons of blood-soaked concrete were carted off and dumped as landfill. If the "Ogre" left anything behind, it’s currently buried under the old Kai Tak runway or a housing estate.</p>
 
-            <a href="kowloon_enhancement.html" class="action-button">Click here to Continue</a>
+            <a href="kowloon_enhancement.php" class="action-button">VIEW CONTRACT</a>
         </div>
     </div>
 
