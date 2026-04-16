@@ -23,15 +23,14 @@ $total_def = $base_def + $cyb_bonus;
 
 $bg_dir = 'assets/bg/';
 
-// 2. Get all images. We'll use a simpler glob search.
+// 2. Get all images.
 $bg_options = glob($bg_dir . "*.png");
 
 // 3. Pick the image
 if (!empty($bg_options)) {
-    // glob returns "assets/bg/bg1.png", which is exactly what you need
     $selected_bg = $bg_options[array_rand($bg_options)];
 } else {
-    // If glob fails, we force the one you know works as a backup
+    // If glob fails, force default
     $selected_bg = 'assets/bg/bg1.png'; 
 }
 ?>
