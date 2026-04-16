@@ -17,13 +17,14 @@ if (isset($_SESSION['username'])) {
     // 2. Package the data to be saved
     $run_data = [
         'name'    => $user,
+        'class'   => $class,
         'power'   => $final_power,
         'ending'  => $end,
         'credits' => $cred,
         'empathy' => $emp
     ];
 
-    // 3. Append the data to leaderboard.txt (JSON format for easy retrieval)
+    // 3. Append the data to leaderboard.txt
     $file = 'leaderboard.txt';
     // FILE_APPEND adds to the end of the file, LOCK_EX prevents data corruption if multiple people finish at once
     file_put_contents($file, json_encode($run_data) . PHP_EOL, FILE_APPEND | LOCK_EX);
