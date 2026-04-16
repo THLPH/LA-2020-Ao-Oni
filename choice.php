@@ -6,13 +6,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['archetype'])) {
 
     switch ($selection) {
         case 'street':
-            $class = "STREET"; $atk = 25; $def = 15; $cred = 50;
+            $class = "STREET"; $atk = 30; $def = 25; $cred = 50;
             break;
         case 'corpo':
-            $class = "CORPO"; $atk = 10; $def = 10; $cred = 500;
+            $class = "CORPO"; $atk = 10; $def = 10; $cred = 600;
             break;
         case 'nomad':
-            $class = "NOMAD"; $atk = 15; $def = 30; $cred = 150;
+            $class = "NOMAD"; $atk = 15; $def = 30; $cred = 200;
             break;
     }
 
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['archetype'])) {
                         </div>
                         <div class="choice-details">
                             <span class="spec-label">STREET</span>
-                            <span class="spec-stats">ATK: 25 | DEF: 15 | CRED: 50</span>
+                            <span class="spec-stats">ATK: 30 | DEF: 25 | CRED: 50</span>
                             <span class="spec-desc">They say if you wanna understand the streets, you gotta live 'em. Gangs, fixers, dolls, small-time pushers - you were raised by them all. Down here the law of the jungle dictates the weak serve the strong.</span>
                         </div>
                     </div>
@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['archetype'])) {
                         </div>
                         <div class="choice-details">
                             <span class="spec-label">CORP</span>
-                            <span class="spec-stats">ATK: 10 | DEF: 10 | CRED: 500</span>
+                            <span class="spec-stats">ATK: 10 | DEF: 10 | CRED: 600</span>
                             <span class="spec-desc">Few leave the corporate world with their lives - fewer still with their souls intact. You've been there - you've bent the rules, exploited secrets and weaponized information. There's no such thing as a fair game, only winners and losers.</span>
                         </div>
                     </div>
@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['archetype'])) {
                         </div>
                         <div class="choice-details">
                             <span class="spec-label">NOMAD</span>
-                            <span class="spec-stats">ATK: 15 | DEF: 30 | CRED: 150</span>
+                            <span class="spec-stats">ATK: 15 | DEF: 30 | CRED: 200</span>
                             <span class="spec-desc">Roaming places, looting scrapyards, raiding fuel depots - life on the road wasn't easy. But growing up in a nomad clan has its perks. Honesty, integrity, and a love of freedom - qualities that few possess, and no amount of money can buy.</span>
                         </div>
                     </div>
