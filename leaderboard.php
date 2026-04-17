@@ -43,7 +43,7 @@ usort($records, function($a, $b) {
     <link rel="stylesheet" href="styles.css">
     <style>
         .leaderboard-table th, .leaderboard-table td {
-            padding: 12px 5px;
+            padding: 12px 5px; /* Slightly tighter padding for more columns */
         }
         .scrollable-table-container {
             max-height: 60vh;
