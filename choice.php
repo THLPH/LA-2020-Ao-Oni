@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['archetype'])) {
                 <button type="submit" name="archetype" value="street" class="choice-btn">
                     <div class="choice-row">
                         <div class="portrait-frame">
-                            <img src="assets/char1.png" alt="Operator Portrait">
+                            <img src="assets/char/char1.png" alt="Operator Portrait">
                         </div>
                         <div class="choice-details">
                             <span class="spec-label">STREET</span>
@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['archetype'])) {
                 <button type="submit" name="archetype" value="corpo" class="choice-btn">
                     <div class="choice-row">
                         <div class="portrait-frame">
-                            <img src="assets/char2.png" alt="Operator Portrait">
+                            <img src="assets/char/char2.png" alt="Operator Portrait">
                         </div>
                         <div class="choice-details">
                             <span class="spec-label">CORP</span>
@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['archetype'])) {
                 <button type="submit" name="archetype" value="nomad" class="choice-btn">
                     <div class="choice-row">
                         <div class="portrait-frame">
-                            <img src="assets/char3.png" alt="Operator Portrait">
+                            <img src="assets/char/char3.png" alt="Operator Portrait">
                         </div>
                         <div class="choice-details">
                             <span class="spec-label">NOMAD</span>

@@ -17,7 +17,7 @@ if (isset($_SESSION['username'])) {
     // 2. Package the data to be saved
     $run_data = [
         'name'    => $user,
-        'class'   => $class,
+	'class'   => $class,
         'power'   => $final_power,
         'ending'  => $end,
         'credits' => $cred,

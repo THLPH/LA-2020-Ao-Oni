@@ -1,0 +1,33 @@
+# Images
+*.jpg
+*.jpeg
+
+# Documents/Logs
+*.txt
+*.html
+
+# --- Things you probably need too ---
+
+# System files (The hidden junk)
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment variables (Crucial for security!)
+.env
+*.env.local
+
+# Dependency folders (Don't track these; use your package manager)
+node_modules/
+vendor/
+
+# Build/Dist folders
+dist/
+build/
+out/
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

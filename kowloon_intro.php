@@ -7,7 +7,7 @@ require_once 'init.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Kowloon Mystery</title>
+    <title>The Kowloon Mystery - Transition</title>
     <style>
         /* Base Page Setup */
         body {
@@ -28,7 +28,7 @@ require_once 'init.php';
             display: flex;
             max-width: 1200px;
             width: 95%;
-            height: 600px;
+            height: 600px; /* Fixed height for the 1:1 ratio */
             background: #0a0a0a;
             border: 1px solid #1a1a1a;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
@@ -36,10 +36,10 @@ require_once 'init.php';
             animation: fadeIn 2.5s ease-in-out forwards;
         }
 
-        /* Image Section */
+        /* Image Section - Forced 1:1 */
         .image-panel {
-            flex: 0 0 600px;
-            height: 600px;
+            flex: 0 0 600px; /* Width fixed at 600px */
+            height: 600px;    /* Height fixed at 600px */
             background-image: url('assets/kowloon.jpg');
             background-size: cover;
             background-position: center;
@@ -47,7 +47,7 @@ require_once 'init.php';
             position: relative;
         }
 
-        /* Dark gradient overlay */
+        /* Dark gradient overlay on the image */
         .image-panel::after {
             content: '';
             position: absolute;
@@ -91,7 +91,7 @@ require_once 'init.php';
             line-height: 1.8;
             font-size: 0.95rem;
             margin-bottom: 25px;
-            text-align: left;
+            text-align: left; /* Changed from justify to improve flow */
             color: #a0a0a0;
         }
 
@@ -100,7 +100,7 @@ require_once 'init.php';
             font-weight: bold;
         }
 
-        /* Button (Anchor Tag) */
+        /* No-JS Button (Anchor Tag) */
         .action-button {
             display: inline-block;
             margin-top: auto;
