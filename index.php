@@ -36,6 +36,26 @@ if (!empty($bg_options)) {
 } else {
     $selected_bg = "assets/bg/bg1.png";
 }
+
+// Advisor: Calculate the narrative advisor text based on Empathy thresholds
+$advisor_text = "";
+
+if ($emp >= 80) {
+    $advisor_text = "The city's rot hasn't touched your core. You're a ghost of a world that actually cared. Most people don't survive long with a heart this loud.";
+} elseif ($emp >= 50) {
+    $advisor_text = "You're still looking for the human element in every dark alley. It is a dangerous habit, but one that keeps you feeling like a person.";
+} elseif ($emp >= 30) {
+    $advisor_text = "You haven't traded your soul for credits just yet, though you've definitely started checking the market prices.";
+} elseif ($emp >= 0) {
+    // STARTING RANGE (0 to 29)
+    $advisor_text = "You're just another operator in the neon fog. Neutral. Functional. You're doing what you have to do to keep the lights on.";
+} elseif ($emp >= -15) {
+    $advisor_text = "The noise of the city is starting to fade. You're becoming efficient. Practical. You don't lose sleep over the job anymore.";
+} else {
+    // -30 AND BELOW
+    $advisor_text = "There is no hesitation left in your hands. You don't see people anymore. You just see targets, obstacles, and the payout.";
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,9 +92,9 @@ if (!empty($bg_options)) {
                         <span>DEFENSE:</span>
                         <span> <?php echo $total_def; ?> [BASE: <?php echo $base_def; ?> + CYB: <?php echo $cyb_bonus; ?>] </span>
                     </div>
-                    <div class="stat-line">
-                        <span>EMPATHY:</span>
-                        <span> <?php echo $emp; ?> </span>
+                    <div class="stat-line" style="flex-direction: column; align-items: flex-start; gap: 8px; border-top: 1px dashed #444; padding-top: 12px; margin-top: 12px;">
+                        <span style="color: #777; font-size: 0.85em; letter-spacing: 2px;">PSYCH-EVALUATION:</span>
+                        <span style="color: --fg-black; font-style: italic; line-height: 1.4;"> <?php echo $advisor_text; ?> </span>
                     </div>
                     <div class="action-menu">
                         <a href="work.php" class="action-btn">Pick up a Job</a>

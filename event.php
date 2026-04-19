@@ -57,6 +57,18 @@ if (isset($_GET['choice'])) {
     header("Location: index.php");
     exit();
 }
+
+//Advisor
+$instinct_text = "";
+if ($emp >= 50) {
+    $instinct_text = "[ANALYSIS]: You're scanning for a way to resolve this without unnecessary wreckage. You see a life behind the data points.";
+} elseif ($emp >= 0) {
+    $instinct_text = "[ANALYSIS]: You're evaluating the risk versus the reward. It's just another encounter in a city full of them.";
+} else {
+    // Low Empathy
+    $instinct_text = "[ANALYSIS]: You're already calculating the salvage value. To you, this isn't an encounter; it's a resource to be harvested.";
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -79,6 +91,9 @@ if (isset($_GET['choice'])) {
         <div class="content-cell">
             
             <span class="notice-text">>>>> ENCOUNTER DETECTED</span>
+		<p>
+		    <?php echo $instinct_text; ?>
+		</p>
             
             <div class="event-image-frame">
                 <img src="assets/event/<?php echo $current_event['img']; ?>" alt="Event Scan">
