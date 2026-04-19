@@ -28,28 +28,24 @@ This project is set up to run directly on the university CODD server.
 
 ---
 
-## 📝 Game Screens Overview
+## Game Screens Overview
 
 **The Daily Hub**
-*<img width="1831" height="1549" alt="Daily Hub Screen" src="https://github.com/user-attachments/assets/PLACEHOLDER-HUB-IMAGE" />*
 This is your main dashboard. We built it with a mobile-first design so it looks great on any device. 
 * **Tracking Your Status:** Keep an eye on your 30-day countdown, your money (Creds), and your Empathy level.
 * **Making Moves:** Choose your daily activity using simple menus that connect directly to our backend logic.
 
 **The Black Market (Shop & Inventory)**
-*<img width="1638" height="938" alt="Black Market Screen" src="https://github.com/user-attachments/assets/PLACEHOLDER-SHOP-IMAGE" />*
 A fully functioning economy running entirely behind the scenes.
 * **Dynamic Pricing:** The game checks your Empathy level; if it's high enough, you automatically get a 10% discount on items.
 * **Quick Actions:** Buying items happens instantly without having to submit a long form every time.
 
 **Narrative Events**
-*<img width="1508" height="1447" alt="Event Screen" src="https://github.com/user-attachments/assets/PLACEHOLDER-EVENT-IMAGE" />*
 This is where the story unfolds.
 * **Making Choices:** When you run into a story event, you submit your choice securely.
 * **Instant Updates:** The game calculates how your choice affects your stats, saves your progress, and brings you right back to the Hub.
 
 **Combat Arena**
-*<img width="1508" height="1447" alt="Combat Screen" src="https://github.com/user-attachments/assets/PLACEHOLDER-COMBAT-IMAGE" />*
 Fights are intense and numbers-driven. 
 * **Behind-the-Scenes Math:** Win or lose, all the weapon damage and attack stats are calculated securely on our server before you even see the results on your screen.
 
