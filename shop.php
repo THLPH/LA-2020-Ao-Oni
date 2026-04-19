@@ -39,6 +39,21 @@ if (isset($_GET['buy_cyb'])) {
     header("Location: shop.php");
     exit();
 }
+
+// Shopkeeper dialog
+// Old: Welcome to the market, operator. Upgrade your hardware. I'll buy your old gear for 95% of what you paid for them. Weapons and Cybernetics hold their value these days
+
+$shop_dialogue = "";
+
+if ($emp >= 60) {
+    $shop_dialogue = "You've got that look in your eyes, operator. Like you actually give a damn. Well, 'caring' doesn't stop bullets, but my hardware does. 95% buyback on your old gear if you're looking to trade up.";
+} elseif ($emp >= 0) {
+    $shop_dialogue = "Welcome back. Same deal as always: I'll buy your old gear for 95% of what you paid. Weapons and cybernetics are the only things that hold their value in this dump.";
+} elseif ($emp >= -15) {
+    $shop_dialogue = "You're looking sharp, operator. Or maybe just cold. Either way, business is business. 95% trade-in value on your current kit. What's your pleasure?";
+} else {
+    $shop_dialogue = "I don't ask questions, and I don't care who you flatlined to get here. Just keep the blood off the floor. 95% buyback on used tech. Let's see your credits.";
+}
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +82,7 @@ if (isset($_GET['buy_cyb'])) {
                 <div>
                     <span class="sys-text" style="margin-bottom: 8px;">>>>> VENDOR NODE ACCESSED...</span>
                     <div class="vendor-dialogue">
-                        "Welcome to the market, operator. Upgrade your hardware. I'll buy your old gear for 95% of what you paid for them. Weapons and Cybernetics hold their value these days."
+                        "<?php echo $shop_dialogue; ?>"
                     </div>
                 </div>
             </div>

@@ -25,6 +25,16 @@ if (isset($_GET['action']) && $_GET['action'] == 'accept') {
     header("Location: index.php");
     exit();
 }
+
+//Advisor
+$work_outlook = "";
+if ($emp >= 50) {
+    $work_outlook = "You filter through the grime of the gig-board, searching for a payday that won't leave your hands feeling filthy.";
+} elseif ($emp >= 0) {
+    $work_outlook = "You scan the list of available scraps. It's all honest work, or at least honest enough for this sector.";
+} else {
+    $work_outlook = "You're just looking for high-yield contracts. The human cost of the job is just another line item you've learned to ignore.";
+}
 ?>
 
 <!DOCTYPE html>
@@ -45,9 +55,11 @@ if (isset($_GET['action']) && $_GET['action'] == 'accept') {
         </div>
         
         <div class="content-cell">
-            
+
             <span class="contract-text">>>>> AVAILABLE CONTRACT: <?php echo $current_job['title']; ?></span>
-            
+            <p>
+	         <?php echo $work_outlook; ?>
+	    </p>
             <div class="work-image-frame">
                 <img src="assets/work/<?php echo $current_job['img']; ?>" alt="Job Location">
             </div>

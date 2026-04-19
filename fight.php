@@ -9,8 +9,8 @@ $cyb_bonus = ($cyb > 0) ? $cybernetics[$cyb]['def_bonus'] : 0;
 $player_atk = $atk + $wep_bonus;
 $player_def = $def + $cyb_bonus;
 
-// Using your requested formula. (Watch out for 0 defense!)
 $player_power = $player_atk * (0.8 * $player_def);
+
 
 // 2. The Enemy Roster
 $enemies = [
@@ -19,7 +19,7 @@ $enemies = [
     15 => ['name' => 'Syndicate Enforcer', 'atk' => 25, 'def' => 20, 'reward' => 1100, 'img_id' => 3],
     20 => ['name' => 'Corp Mecha', 'atk' => 45, 'def' => 35, 'reward' => 1600, 'img_id' => 4],
     25 => ['name' => 'Samurai Cyberpsycho', 'atk' => 70, 'def' => 60, 'reward' => 2200, 'img_id' => 5],
-    30 => ['name' => 'The Radiant Knight', 'atk' => 100, 'def' => 80, 'reward' => 3000, 'img_id' => 6],
+    30 => ['name' => 'The Radiant Knight', 'atk' => 100, 'def' => 80, 'reward' => 3500, 'img_id' => 6],
     31 => ['name' => 'Madame Oni', 'atk' => 150, 'def' => 100, 'reward' => 0, 'img_id' => 7]
 ];
 
@@ -38,6 +38,19 @@ if ($current_enemy) {
     $enemy_image = ""; 
 }
 
+// Advisor: Power assessment
+$threat_assessment = "";
+if ($current_enemy) {
+    $enemy_pwr = $current_enemy['atk'] * (0.8 * $current_enemy['def']);
+    
+    if ($player_power >= $enemy_pwr * 1.5) {
+        $threat_assessment = "Target is severely outmatched. Bounty should be swift.";
+    } elseif ($player_power >= $enemy_pwr) {
+        $threat_assessment = "Threat level moderate. Maintain tactical focus. Be careful.";
+    } else {
+        $threat_assessment = "WARNING: Target outclasses current hardware. Survival probability low. Please be advised.";
+    }
+}
 
 // Variables to handle the outcome screen
 $combat_resolved = false;
@@ -141,6 +154,13 @@ if (isset($_GET['action']) && $_GET['action'] == 'engage' && $current_enemy) {
                     [TARGET POWER] : <?php echo $current_enemy['atk'] * (0.8 * $current_enemy['def']); ?><br>
                     [YOUR POWER]   : <?php echo $player_power; ?>
                 </div>
+
+		<div class="status-text" style="margin-top: 15px; padding: 10px; border: 1px solid #444; background: rgba(20, 20, 20, 0.8);">
+		    <span style="color: #a0a0a0; font-size: 0.85em;">>>>> TACTICAL ADVISORY:</span><br>
+		    <span style="color: <?php echo ($player_power < ($current_enemy['atk'] * (0.8 * $current_enemy['def']))) ? '#ff4444' : '#ffffff'; ?>;">
+		        <?php echo $threat_assessment; ?>
+		    </span>
+		</div>
 
                 <div class="action-menu">
                     <a href="fight.php?action=engage" class="action-btn">Engage Target</a>
